@@ -24,12 +24,13 @@
                 <input type="email" placeholder="Email" name="email">
                 <button type="button" onclick="loginOwner()">Login</button>
             </form>
-            <p>Or...</p>
-            <form id="owner-register">
+            <form id="owner-register" class="hidden">
                 <input type="text" placeholder="Name" name="name">
                 <input type="email" placeholder="Email" name="email">
                 <button type="button" onclick="registerOwner()">Register</button>
             </form>
+            <p>Or</p>
+            <button id="toggleFormButton" type="button" onclick="switchForms()">Register</button>
         </div>
         <div id="walker-forms" class="hidden">
             <form id="walker-register">

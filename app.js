@@ -1,5 +1,6 @@
 const apiURL = "https://3y0arl9udf.execute-api.eu-west-2.amazonaws.com/test";
 let currentOwnerId = null;
+let currentOwnerForm = 'owner-login';
 
 function showForm(type) {
     document.getElementById('role-selection').style.display = 'none';
@@ -110,5 +111,25 @@ function clearInputs() {
     inputs.forEach(input => {
     input.value = "";
 });
+}
+
+function showLoginForm() {
+    document.getElementById('owner-login').classList.remove('hidden');
+    document.getElementById('owner-register').classList.add('hidden');
+    document.getElementById('toggleFormButton').textContent = 'Register';
+}
+
+function showRegisterForm() {
+    document.getElementById('owner-register').classList.remove('hidden');
+    document.getElementById('owner-login').classList.add('hidden');
+    document.getElementById('toggleFormButton').textContent = 'Login';
+}
+
+function switchForms() {
+    if (document.getElementById('owner-login').classList.contains('hidden')) {
+        showLoginForm();
+    } else {
+        showRegisterForm();
+    }
 }
 
