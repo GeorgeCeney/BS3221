@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waqq.ly</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Waqq.ly</h1>
+        <img src="waqqly-logo.png" alt="Waqq.ly logo" id="dog-logo">
+    </header>
+    <button id="home-button" onclick="goHome()">Home</button>
+    <main>
+        <p>Welcome to Waqq.ly - <i>Your Dog's Best Friend When You're Away!</i></p>
+        <div id="role-selection">
+            <button onclick="showForm('owner')">Owner</button>
+            <button onclick="showForm('walker')">Walker</button>
+        </div>
+        <div id="owner-forms" class="hidden">
+            <form id="owner-login">
+                <input type="email" placeholder="Email" name="email">
+                <button type="button" onclick="loginOwner()">Login</button>
+            </form>
+            <p>Or...</p>
+            <form id="owner-register">
+                <input type="text" placeholder="Name" name="name">
+                <input type="email" placeholder="Email" name="email">
+                <button type="button" onclick="registerOwner()">Register</button>
+            </form>
+        </div>
+        <div id="walker-forms" class="hidden">
+            <form id="walker-register">
+                <input type="text" placeholder="Name" name="name">
+                <input type="text" placeholder="Number" name="number">
+                <input type="text" placeholder="Availability" name="availability">
+                <button type="button" onclick="registerWalker()">Register</button>
+            </form>
+        </div>
+        <div id="owner-info-section" class="hidden">
+            <h1>Available Dog Walkers</h1>
+            <table id="walkers-table" class="w-full border">
+                <!-- Will be populated by JavaScript -->
+            </table>
+        </div>
+    </main>
+</body>
+</html>
